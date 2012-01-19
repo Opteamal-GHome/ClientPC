@@ -1,15 +1,20 @@
+body {
+	background-color: #252525;
+}
+
 #main {
 	width: 900px;
-	margin: auto;
+	margin: 50 auto;
 }
 
 #main_header {
 	width: 900px;
-	height: 45px;
+	height: 34px;
 	text-align: center;
 	margin:auto;
 	border:1px black solid;
-	border-radius: 5px 5px 5px 5px; 
+	border-radius: 8px 8px 8px 8px; 
+	background: url("background_header.png") repeat-x scroll 0 0 #000000;
 }
 
 #main_header ul{
@@ -22,6 +27,18 @@
 	position: relative;
 	float: left;
 	width: 25%;
-	line-height: 45px;
+	height: 34px;
+	line-height: 32px;
 	list-style-type: none;
+	cursor: pointer;
+}
+
+#main_header li a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#main_header li:hover{
+	background: url("background_header_hover.png") repeat-x scroll 0 0 #000000;
+	border-radius: 8px 8px 8px 8px; 
 }
