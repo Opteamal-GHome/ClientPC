@@ -2,8 +2,36 @@
     margin:auto;
     width:100%;
     height:100px;
+	line-height: 100px;
+	font-weight:bold;
+	text-align:center;
+	font-size: 200%;
     border:1px black solid;
 }
+
+#main_header {
+	width: 900px;
+	height: 45px;
+	text-align: center;
+	margin:auto;
+	border:1px black solid;
+	border-radius: 5px 5px 5px 5px; 
+}
+
+#main_header ul{
+	margin: 0;
+	padding: 0;
+}
+
+
+#main_header li{
+	position: relative;
+	float: left;
+	width: 25%;
+	line-height: 45px;
+	list-style-type: none;
+}
+
 
 #menu_gauche {
     width:200px;
