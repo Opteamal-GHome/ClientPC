@@ -1,6 +1,6 @@
 body {
 	background-color: #F7FFDE;
-height: 100%;}
+}
 
 #main {
 	width: 900px;
@@ -15,22 +15,24 @@ height: 100%;}
 	border:1px black solid;
 	border-radius: 8px 8px 8px 8px; 
 	background: url("background_header.png") repeat-x scroll 0 0 #000000;
+	
 }
 
 #main_header ul{
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0 4%;
 }
-
 
 #main_header li{
 	position: relative;
 	float: left;
-	width: 25%;
+	width: 24%;
 	height: 34px;
 	line-height: 32px;
 	list-style-type: none;
 	cursor: pointer;
+		background: url("background_header.png") repeat-x scroll 0 0 #000000;
+
 }
 
 #main_header li a {
@@ -41,4 +43,8 @@ height: 100%;}
 #main_header li:hover{
 	background: url("background_header_hover.png") repeat-x scroll 0 0 #000000;
 	border-radius: 8px 8px 8px 8px; 
+}
+
+
+#main_header li.current_chap{
 }
