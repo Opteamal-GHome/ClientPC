@@ -3,21 +3,14 @@
 	height: 200px;
 	float: left;
 	margin: 10 30 10 30;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	background-image: -moz-linear-gradient(100% 100% 135deg, rgba(160, 160, 160, 1.0), rgba(90, 90, 90, 0.9));
-	-moz-box-shadow: 10px 10px 5px #444;
-	-webkit-box-shadow: 10px 10px 5px #444;
-	box-shadow: 10px 10px 5px #444;
-	color: #CECECE;
-	opacity: 0.9;
+	background-color: #FFF;
+    border: 1px solid #DAED9D;
+	border-radius: 5px 5px 5px 5px; 
+	color: #404040;
 }
 
 .capteur:hover {
-	opacity: 1.0;
-	-moz-box-shadow: 12px 12px 6px #444;
-	-webkit-box-shadow: 12px 12px 6px #444;
-	box-shadow: 12px 12px 6px #444;
+	opacity: 0.8;
 }
 
 .nom_capteur {
