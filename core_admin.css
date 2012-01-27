@@ -1,3 +1,12 @@
+div.box_condition {
+	float: left;
+	width: 620px;
+	height: 300px;
+	background-color: #FFFFFF;
+    border: 1px solid #DAED9D;
+	border-radius: 5px 5px 5px 5px;
+}
+
 .box_condition ul {
 	margin: 15px;
 	padding: 0;
@@ -20,22 +29,12 @@ li.capteur .img_capteur {
 	width: 45px;
 	height: 45px;
 	margin-right: -10px;
-	opacity: 0.8;
 }
-
 
 li.capteur .nom_capteur {
 	float: left;
 	line-height: 50px;
 	font-size: 13px;
-}
-
-div.box_condition {
-	width: 620px;
-	height: 300px;
-	background-color: #FFFFFF;
-    border: 1px solid #DAED9D;
-	border-radius: 5px 5px 5px 5px;
 }
 
 .sel_capteur {
@@ -97,4 +96,51 @@ ul.liste_operation {
 	top: 130px;
 	float: left;
 	left: 85px;
+}
+
+div.btn_ajout_cond {
+	position: relative;
+	top: 280px;
+	left: 590px;
+	background: url("round_plus.png") 0 0 no-repeat white;
+	background-size: 100% 100%;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+}
+
+div.fleche_condition {
+	background: url("parenthese.png") 0 0 no-repeat transparent;
+	background-size: 100% 100%;
+	margin: 0 10 0 10;
+	float: left;
+	width: 40px;
+	height: 300px;
+}
+
+div.box_action {
+	float: left;
+	width: 260px;
+	height: 300px;
+	background-color: #FFFFFF;
+    border: 1px solid #DAED9D;
+	border-radius: 5px 5px 5px 5px;
+}
+
+ul.liste_actionneurs {
+	margin: 15px;
+	padding: 0;
+	float: left;
+}
+
+.sel_actionneur {
+	position: relative;
+	top: 180px;
+	left: 70px;
+	width: 120px;
+	height: 60px;
+	border: 2px solid #57AFE6;
+	border-radius: 3px;
 }
