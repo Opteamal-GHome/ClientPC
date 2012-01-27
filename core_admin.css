@@ -1,5 +1,4 @@
 .box_condition ul {
-	position: relative;
 	margin: 15px;
 	padding: 0;
 	float: left;
@@ -45,6 +44,19 @@ div.box_condition {
 	float: left;
 	width: 120px;
 	height: 60px;
-	border: 1px solid #A0A0A0;
+	border: 2px solid #57AFE6;
 	border-radius: 3px;
+}
+
+.operation {
+	float: left;
+}
+
+.operation .liste_operation {
+	
+}
+
+.sel_operateur {
+	width: 50px;
+	height: 50px;
 }
