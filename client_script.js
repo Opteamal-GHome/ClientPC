@@ -103,8 +103,8 @@ $(function() {
 		
 		$.ajax({
 			type: 'POST',
-			url: $('#urlServer').text() + "/form",
-			data: '{"rule": {"ruleName": "", "conditions": [{"type": "' + operateur + '", "leftOp": ' + capteur + ', "rightOp": ' + valeur + '}], \
+			url: "/form",
+			data: '{"type": "newRule", "rule": {"ruleName": "", "conditions": [{"type": "' + operateur + '", "leftOp": ' + capteur + ', "rightOp": ' + valeur + '}], \
 											 "actions": [{"actuator": ' + actionneur + ', "value": 0}]}}',
 			dataType: "json"
 		});
