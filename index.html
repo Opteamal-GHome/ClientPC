@@ -3,7 +3,15 @@
 	<head>
 		<link rel=StyleSheet href="style.css" type="text/css" media=screen>
 		<link rel=StyleSheet href="core_admin.css" type="text/css" media=screen>
+		
+		<link type="text/css" href="jquery-ui-1.8.17/css/themename/jquery-ui-1.8.17.custom.css" rel="Stylesheet" />	
+		<link rel="stylesheet" href="jquery-ui-1.8.17/development-bundle/themes/base/jquery.ui.all.css">
+		<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-ui-1.8.17.custom.min.js"></script>
+		<script type="text/javascript" src="client_script.js"></script>
+	
 	</head>
+	
 
 	<body>
 
@@ -26,10 +34,12 @@
 		
 <div id="core_admin">
 
+	<div id="urlServer" style="visibility:hidden"></div>
+
 	<div id="ens_condition">
 		<div class="box_condition"> 
-			<ul class="liste_capteurs">
-								<li class="capteur">
+			<ul class="liste_capteurs gallery ui-helper-reset ui-helper-clearfix">
+				<li class="capteur">
 					<img class="img_capteur" src="Thermometer_1_24282.png"> 
 					<div class="nom_capteur">Salon</div>
 				</li>
@@ -45,14 +55,17 @@
 
 			
 			<div class="sel_capteur">
+				<ul class='gallery ui-helper-reset'/>
 			</div>
 			
 			<div class="operation">
-				<div class="sel_operateur"></div>
+				<div class="sel_operateur">
+					<ul class='gallery ui-helper-reset'/>
+				</div>
 				<ul class="liste_operation">
-					<li><</li>
-					<li>=</li>
-					<li>></li>
+					<li class="operateur" title="inf"><</li>
+					<li class="operateur" title="equ">=</li>
+					<li class="operateur" title="sup">></li>
 				</ul>
 			</div>
 			
@@ -71,24 +84,28 @@
 			<div class="img_fleche">
 			</div>
 		</div>
-	</div>
 	
-	<div class="box_action"> 
-		<ul class="liste_actionneurs">
-			<li class="capteur">
-					<img class="img_capteur" src="img_actionneurP.jpg"> 
-					<div class="nom_capteur">Salon</div>
-				</li>
+		<div class="box_action"> 
+			<ul class="liste_actionneurs">
 				<li class="capteur">
-					<img class="img_capteur" src="img_actionneurP.jpg">
-					<div class="nom_capteur">Chambre</div>
-				</li>
-		</ul>
-		<div class="sel_actionneur"></div>
-		<div class="img_action">
+						<img class="img_capteur" src="C315b.png"> 
+						<div class="nom_capteur">Salon</div>
+					</li>
+					<li class="capteur">
+						<img class="img_capteur" src="C315b.png">
+						<div class="nom_capteur">Chambre</div>
+					</li>
+			</ul>
+			<div class="sel_actionneur">
+				<ul class='gallery ui-helper-reset'/>
+			</div>
+			<div class="img_action">
+				<div id="slider"></div>
+			</div>
+			<div id="btn_valider">Valider</div>
 		</div>
 	</div>
-	
+
 
 </div>
 
