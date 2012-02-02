@@ -1,9 +1,10 @@
 <div id="core_admin">
 
+	<div id="urlServer" style="visibility:hidden"></div>
+
 	<div id="ens_condition">
 		<div class="box_condition"> 
-			<ul class="liste_capteurs">
-				
+			<ul class="liste_capteurs gallery ui-helper-reset ui-helper-clearfix">
 				<li class="capteur">
 					<img class="img_capteur" src="Thermometer_1_24282.png"> 
 					<div class="nom_capteur">Salon</div>
@@ -17,16 +18,20 @@
 					<div class="nom_capteur">Salle de bain</div>
 				</li>
 			</ul>
+
 			
 			<div class="sel_capteur">
+				<ul class='gallery ui-helper-reset'/>
 			</div>
 			
 			<div class="operation">
-				<div class="sel_operateur"></div>
+				<div class="sel_operateur">
+					<ul class='gallery ui-helper-reset'/>
+				</div>
 				<ul class="liste_operation">
-					<li><</li>
-					<li>=</li>
-					<li>></li>
+					<li class="operateur" title="inf"><</li>
+					<li class="operateur" title="equ">=</li>
+					<li class="operateur" title="sup">></li>
 				</ul>
 			</div>
 			
@@ -45,21 +50,25 @@
 			<div class="img_fleche">
 			</div>
 		</div>
-	</div>
 	
-	<div class="box_action"> 
-		<ul class="liste_actionneurs">
-			<li class="capteur">
-				<img class="img_capteur" src="img_actionneurP.jpg"> 
-				<div class="nom_capteur">Salon</div>
-			</li>
-			<li class="capteur">
-				<img class="img_capteur" src="img_actionneurP.jpg">
-				<div class="nom_capteur">Chambre</div>
-			</li>
-		</ul>
-		<div class="sel_actionneur"></div>
-		<div class="img_action">
+		<div class="box_action"> 
+			<ul class="liste_actionneurs">
+				<li class="capteur">
+						<img class="img_capteur" src="C315b.png"> 
+						<div class="nom_capteur">Salon</div>
+					</li>
+					<li class="capteur">
+						<img class="img_capteur" src="C315b.png">
+						<div class="nom_capteur">Chambre</div>
+					</li>
+			</ul>
+			<div class="sel_actionneur">
+				<ul class='gallery ui-helper-reset'/>
+			</div>
+			<div class="img_action">
+				<div id="slider"></div>
+			</div>
+			<div id="btn_valider">Valider</div>
 		</div>
 	</div>
 	

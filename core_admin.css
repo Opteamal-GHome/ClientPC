@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 div.box_condition {
 	float: left;
 	width: 620px;
@@ -7,7 +12,13 @@ div.box_condition {
 	border-radius: 5px 5px 5px 5px;
 }
 
-.box_condition ul {
+#ens_condition {
+	height: 300px;
+	float: left;
+	z-index: 10;
+}
+
+.box_condition ul.liste_capteurs {
 	margin: 15px;
 	padding: 0;
 	float: left;
@@ -22,6 +33,11 @@ li.capteur {
 	border-radius: 3px;
 	padding: 5px 0 5px 0;
 	overflow: hidden;
+	z-index: 100;
+}
+
+li.capteur:hover {
+	opacity: 0.8;
 }
 
 li.capteur .img_capteur {
@@ -29,6 +45,12 @@ li.capteur .img_capteur {
 	width: 45px;
 	height: 45px;
 	margin-right: -10px;
+}
+
+.box_action li.capteur .img_capteur {
+width: 50px;
+	height: 50px;
+	margin-right: -1px;
 }
 
 li.capteur .nom_capteur {
@@ -42,8 +64,8 @@ li.capteur .nom_capteur {
 	top: 120px;
 	left: 10px;
 	float: left;
-	width: 120px;
-	height: 60px;
+	width: 122px;
+	height: 62px;
 	border: 2px solid #57AFE6;
 	border-radius: 3px;
 }
@@ -59,10 +81,10 @@ li.capteur .nom_capteur {
 
 ul.liste_operation {
 	margin: 0 0 0 0;
-	float: left;
+	height: 40px;
 }
 
-.operation .liste_operation li {
+li.operateur {
 	list-style: none;
 	text-align: center;
 	float: left;
@@ -76,12 +98,15 @@ ul.liste_operation {
 	color: #404040;
 }
 
+li.operateur:hover {
+	opacity: 0.8;
+}
+
 .sel_operateur {
-	float: left;
 	position: relative;
 	left: 41px;
-	width: 40px;
-	height: 40px;
+	width: 42px;
+	height: 42px;
 	border: 2px solid #57AFE6;
 	border-radius: 3px;
 	margin-bottom: 20px;
@@ -112,12 +137,13 @@ div.btn_ajout_cond {
 }
 
 div.fleche_condition {
+	position: relative;
 	background: url("parenthese.png") 0 0 no-repeat transparent;
 	background-size: 100% 100%;
 	margin: 0 10 0 10;
 	float: left;
 	width: 40px;
-	height: 300px;
+	height: 100%;
 }
 
 div.box_action {
@@ -132,15 +158,60 @@ div.box_action {
 ul.liste_actionneurs {
 	margin: 15px;
 	padding: 0;
-	float: left;
+	height: 130px;
 }
 
 .sel_actionneur {
 	position: relative;
-	top: 180px;
+	top: 0px;
 	left: 70px;
-	width: 120px;
-	height: 60px;
+	width: 122px;
+	height: 62px;
 	border: 2px solid #57AFE6;
 	border-radius: 3px;
+}
+
+.img_action {
+	position: relative;
+	top: 10px;
+	left: 73px;
+	width: 77px;
+	height: 32px;
+	padding: 20 20 0 20;
+	background: url("ui_set_onoff_02.png") 0 0 no-repeat transparent;
+	background-position: -42px -18px;
+	border-radius: 25px 25px 25px 25px;
+}
+
+#slider a {
+	width: 0.6em;
+}
+
+#slider {
+	opacity: 0.0;
+	background: none;
+	border: 0px;
+	
+	-moz-transition: all 0.3s ease-in 0s; 
+	-webkit-transition: all 0.3s ease-in 0s; 
+	-o-transition: all 0.3s ease-in 0s; 
+	-ms-transition: all 0.3s ease-in 0s;
+}
+
+#btn_valider {
+	position: relative;
+	top: 10px;
+	left: 180px;
+	background-color: black;
+	color: white;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	height: 35px;
+	width: 90px;
+	line-height: 1.5;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 0 0 0 10px;
+	cursor: pointer;
+	font-family:Verdana,Georgia,Serif;
 }
