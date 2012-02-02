@@ -3,7 +3,7 @@
  */
 
   
-var wsuri = "ws://localhost:8080"; // + $('#urlServer').text().split(":")[0] + ":9000";
+var wsuri = "ws://localhost:8081"; // + $('#urlServer').text().split(":")[0] + ":9000";
 var webSocket;
 
 $(function() {
@@ -33,7 +33,7 @@ function sendNewRule(message) {
 	console.log("webSocket = " + webSocket);
 	console.log("JSON = " + JSON);
 	console.log("JSON = " + JSON.parse(message));
-	console.log("JSON = " + JSON.stringify(message);
+	console.log("JSON = " + JSON.stringify(message));
 
 	webSocket.send(JSON.stringify(message));
 };
