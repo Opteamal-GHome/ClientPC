@@ -103,7 +103,7 @@ $(function() {
 		
 		$.ajax({
 			type: 'POST',
-			url: $('#urlServer').text() + "/form",
+			url:  "/form",
 			data: '{"rule": {"ruleName": "", "conditions": [{"type": "' + operateur + '", "leftOp": ' + capteur + ', "rightOp": ' + valeur + '}], \
 											 "actions": [{"actuator": ' + actionneur + ', "value": 0}]}}',
 			dataType: "json"
