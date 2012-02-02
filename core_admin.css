@@ -215,3 +215,7 @@ ul.liste_actionneurs {
 	cursor: pointer;
 	font-family:Verdana,Georgia,Serif;
 }
+
+#btn_valider:hover {
+	background-color: #202020;
+}

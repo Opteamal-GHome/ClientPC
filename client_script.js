@@ -96,15 +96,21 @@ $(function() {
 		var operateur = $('#ens_condition div.sel_operateur li.operateur').attr("title");
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
+
+		console.log("url = " + $('#urlServer').text());
+		console.log( '{"rule": {"ruleName": "", "conditions": [{"type": "' + operateur + '", "leftOp": ' + capteur + ', "rightOp": ' + valeur + '}], \
+											 "actions": [{"actuator": ' + actionneur + ', "value": 0}]}}');
 		
-	
 		$.ajax({
 			type: 'POST',
-			url: "",
+			url: $('#urlServer').text(),
 			data: '{"rule": {"ruleName": "", "conditions": [{"type": "' + operateur + '", "leftOp": ' + capteur + ', "rightOp": ' + valeur + '}], \
 											 "actions": [{"actuator": ' + actionneur + ', "value": 0}]}}',
 			dataType: "json"
 		});
+		
+		
+		
 	});
 	
 });
