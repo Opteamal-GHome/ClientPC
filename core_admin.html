@@ -1,22 +1,13 @@
 <div id="core_admin">
 
-	<div id="urlServer" style="visibility:hidden"></div>
+	<div id="urlServer" style="visibility:hidden">
+	$IPSERVEUR$
+	</div>
 
 	<div id="ens_condition">
 		<div class="box_condition"> 
 			<ul class="liste_capteurs gallery ui-helper-reset ui-helper-clearfix">
-				<li class="capteur">
-					<img class="img_capteur" src="Thermometer_1_24282.png"> 
-					<div class="nom_capteur">Salon</div>
-				</li>
-				<li class="capteur">
-					<img class="img_capteur" src="bulb.png">
-					<div class="nom_capteur">Chambre</div>
-				</li>
-				<li class="capteur">
-					<img class="img_capteur" src="Thermometer_1_24282.png">
-					<div class="nom_capteur">Salle de bain</div>
-				</li>
+				$LISTECAPTEURS$
 			</ul>
 
 			
@@ -53,14 +44,7 @@
 	
 		<div class="box_action"> 
 			<ul class="liste_actionneurs">
-				<li class="capteur">
-						<img class="img_capteur" src="C315b.png"> 
-						<div class="nom_capteur">Salon</div>
-					</li>
-					<li class="capteur">
-						<img class="img_capteur" src="C315b.png">
-						<div class="nom_capteur">Chambre</div>
-					</li>
+				$LISTEACTIONNEURS$
 			</ul>
 			<div class="sel_actionneur">
 				<ul class='gallery ui-helper-reset'/>
