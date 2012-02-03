@@ -98,14 +98,14 @@ $(function() {
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
 
 		console.log("url = " + $('#urlServer').text());
-		console.log( '{"rule": {"ruleName": "", "conditions": [{"type": "' + operateur + '", "leftOp": ' + capteur + ', "rightOp": ' + valeur + '}], \
+		console.log( '{"rule": {"ruleName": "", "conditions": [{"type":"' + operateur + '", "leftOp": ' + capteur + ', "rightOp": ' + valeur + '}], \
 											 "actions": [{"actuator": ' + actionneur + ', "value": 0}]}}');
 		
 		$.ajax({
 			type: 'POST',
 			url: "/form",
-			data: '{"type": "newRule", "rule": {"ruleName": "", "conditions": [{"type": "' + operateur + '", "leftOp": ' + capteur + ', "rightOp": ' + valeur + '}], \
-											 "actions": [{"actuator": ' + actionneur + ', "value": 0}]}}',
+			data: '{"type": "newRule", "rule": {"ruleName": "", "conditions": [{"type":"' + operateur + '", "leftOp":"' + capteur + '", "rightOp":"' + valeur + '"}], \
+											 "actions": [{"actuator": "' + actionneur + '", "value": "0"}]}}',
 			dataType: "json"
 		});
 		
