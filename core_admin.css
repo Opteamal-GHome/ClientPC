@@ -1,19 +1,47 @@
-* {
+﻿* {
 	margin: 0;
 	padding: 0;
 }
 
+#header_admin {
+	height: 30px;
+	width: 360px;
+	margin: -50 auto 40 auto;
+	background: url("bg_masthead.jpg") repeat-x scroll left top #FFFFFF;
+	background-position: 0 -60px;
+}
+
+#header_admin li {
+	float: left;
+	list-style-type: none;
+	width: 33%;
+	text-align: center;
+	margin-top : 5px;
+}
+
+#header_admin li a {
+	text-decoration: none;
+	color: #666666;
+}
+
+#header_admin li a:hover {
+	border-bottom: 2px solid #999999;
+	color: #999999;
+}
+
 div.box_condition {
 	float: left;
-	width: 620px;
+	width: 100%;
 	height: 300px;
 	background-color: #FFFFFF;
     border: 1px solid #DAED9D;
 	border-radius: 5px 5px 5px 5px;
+	margin-bottom: 10px;
 }
 
 #ens_condition {
 	height: 300px;
+	width: 620px;
 	float: left;
 	z-index: 10;
 }
@@ -143,7 +171,7 @@ div.fleche_condition {
 	margin: 0 10 0 10;
 	float: left;
 	width: 40px;
-	height: 100%;
+	height: 300px;
 }
 
 div.box_action {
@@ -201,19 +229,19 @@ ul.liste_actionneurs {
 #btn_valider {
 	position: relative;
 	top: 10px;
-	left: 180px;
+	left: 190px;
 	background-color: black;
 	color: white;
 	border: 1px solid transparent;
-	border-radius: 20px;
-	height: 35px;
-	width: 90px;
+	border-radius: 16px;
+	height: 30px;
+	width: 78px;
 	line-height: 1.5;
 	font-size: 20px;
 	font-weight: bold;
 	padding: 0 0 0 10px;
 	cursor: pointer;
-	font-family:Verdana,Georgia,Serif;
+	font-family: "Droid Sans",Georgia,Serif;
 }
 
 #btn_valider:hover {

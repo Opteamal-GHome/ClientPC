@@ -49,7 +49,7 @@ function makeDraggable($liste_initiale, $zone_selection, $box) {
 		});
 	}
 }
-
+function yourfunction() { alert('test'); }
 
 $(function() {
 	
@@ -97,6 +97,9 @@ $(function() {
 			dataType: "json"
 		});
 	});
+	
+	//window.setInterval(yourfunction, 5000);
+
 	
 	$('.btn_ajout_cond').click(function() {
 		
