@@ -92,8 +92,8 @@ $(function() {
 		$.ajax({
 			type: 'POST',
 			url: "/form",
-			data: '{"type": "newRule", "rule": {"ruleName": "", "conditions": [{"type": "' + operateur + '", "leftOp": ' + capteur + ', "rightOp": ' + valeur + '}], \
-											 "actions": [{"actuator": ' + actionneur + ', "value": 0}]}}',
+			data: '{"type": "newRule", "rule": {"ruleName": "", "conditions": [{"type":"' + operateur + '", "leftOp":"' + capteur + '", "rightOp":"' + valeur + '"}], \
+											 "actions": [{"actuator": "' + actionneur + '", "value": "0"}]}}',
 			dataType: "json"
 		});
 	});
