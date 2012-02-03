@@ -54,13 +54,14 @@ function makeDraggable($liste_initiale, $zone_selection, $box) {
 $(function() {
 	
 	// On rend draggable les éléments dans les boîtes condition
-	$('#ens_condition').each(function(i) {
-		console.log("dragaglisation");
-		makeDraggable($('.liste_capteurs', $(this)), $('.sel_capteur', $(this)), $('.box_condition', $(this)));
-		makeDraggable($('.liste_operation', $(this)), $('.sel_operateur', $(this)), $('.box_condition', $(this)));
-		makeDraggable($('.liste_actionneurs', $(this)), $('.sel_actionneur', $(this)), $('.box_action', $(this)));
+	$('div.box_condition').each(function(i) {
+		console.log("box = " + $(this).html());
+		makeDraggable($('.liste_capteurs', $(this)), $('.sel_capteur', $(this)), $(this));
+		console.log('klerjgn')
+		makeDraggable($('.liste_operation', $(this)), $('.sel_operateur', $(this)), $(this));
 	});
-	
+	makeDraggable($('.liste_actionneurs', $('.box_action')), $('.sel_actionneur', $('.box_action')), $('.box_action'));
+
 	$( "#slider" ).slider({
 			value:0,
 			min: 0,
@@ -81,15 +82,6 @@ $(function() {
 		$( "#slider" ).css("opacity", 0.0);
 	});
 	
-	/*
-	{
-		"rule": {"ruleName": "nomRegle", "conditions": [ { "type": "inf", "leftOp": "1", "rightOp": "@10" },
-														 { "type": "sup_date", "date": "08: 00" } ],
-										 "actions": [ { "actuator": "20", "value": "21" },
-													  { "actuator": "14", "value": "27" } ] }
-	}
-	*/
-	
 	$('#btn_valider').click(function() {
 		
 		var capteur = $('#ens_condition div.sel_capteur li.capteur').attr("id");
@@ -97,10 +89,6 @@ $(function() {
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
 
-		console.log("url = " + $('#urlServer').text());
-		console.log( '{"rule": {"ruleName": "", "conditions": [{"type": "' + operateur + '", "leftOp": ' + capteur + ', "rightOp": ' + valeur + '}], \
-											 "actions": [{"actuator": ' + actionneur + ', "value": 0}]}}');
-		
 		$.ajax({
 			type: 'POST',
 			url: "/form",
@@ -108,9 +96,20 @@ $(function() {
 											 "actions": [{"actuator": ' + actionneur + ', "value": 0}]}}',
 			dataType: "json"
 		});
+	});
+	
+	$('.btn_ajout_cond').click(function() {
 		
-		
-		
+		 $.getJSON('/capteurs/alldevices', function(data) {
+            console.log("recu =" +data); //uncomment this for debug
+            //alert (data.item1+" "+data.item2+" "+data.item3); //further debug
+            //$('#showdata').html("<p>item1="+data.item1+" item2="+data.item2+" item3="+data.item3+"</p>");
+        });
+		/*
+		$('#ens_condition').height($('#ens_condition').height() + 310);
+		$('.fleche_condition').height($('#ens_condition').height());
+		$('#ens_condition div.box_condition:last').after('<div class="box_condition"></div>');
+		*/
 	});
 	
 });
