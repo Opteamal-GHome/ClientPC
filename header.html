@@ -13,18 +13,25 @@
 
 	<body>
 
-		<div id="main_header">
-			
-			<ul class="nav_header">
-				
-				<li class="onglet_header"> <a href="./capteurs"> Capteur </a> </li>
-				<li class="onglet_header"> <a href="./stat"> Statistiques </a> </li>
-				<li class="onglet_header"> <a href="./admin"> Administration </a> </li>
-				<li class="onglet_header"> <a href="./about"> A propos </a> </li>
-				
-			</ul>
-
-		</div>
-		
 		<div id ="main">
+
+			<ul id="main_header">
+				<li class="onglet_header current_chap"> <a href="./capteurs"> Capteur </a> </li>
+				<li class="onglet_header"> <a href="./stat"> Statistiques </a>
+				<ul>
+					<li><a href="./temperature"> Température </a></li>
+					<li><a href="./presence"> Présence </a></li>
+					<li><a href="./groups"> Groupes </a></li>
+				</ul>
+				</li>
+				<li class="onglet_header"> <a href="./admin"> Administration </a> 
+					<ul>
+						<li><a href="./create_rule"> Créer Règle </a></li>
+						<li><a href="./rules"> Règles </a></li>
+						<li><a href="./groups"> Groupes </a></li>
+					</ul>
+				</li>
+				<li class="onglet_header"> <a href="./about"> A propos </a> </li>
+			</ul>
+		
 		

@@ -3,32 +3,6 @@
 	padding: 0;
 }
 
-#header_admin {
-	height: 30px;
-	width: 360px;
-	margin: -50 auto 40 auto;
-	background: url("bg_masthead.jpg") repeat-x scroll left top #FFFFFF;
-	background-position: 0 -60px;
-}
-
-#header_admin li {
-	float: left;
-	list-style-type: none;
-	width: 33%;
-	text-align: center;
-	margin-top : 5px;
-}
-
-#header_admin li a {
-	text-decoration: none;
-	color: #666666;
-}
-
-#header_admin li a:hover {
-	border-bottom: 2px solid #999999;
-	color: #999999;
-}
-
 div.box_condition {
 	float: left;
 	width: 100%;
