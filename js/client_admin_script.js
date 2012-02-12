@@ -104,6 +104,7 @@ $(function() {
 		var operateur = $('#ens_condition div.sel_operateur li.operateur').attr("title");
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.periph').attr("id");
+		var activation = ($('#ens_condition #slider a').css("left") == "0%") ? 0 : 1;
 
 
 		if (typeof(nom) == 'undefined') {nom="";}
@@ -118,7 +119,7 @@ $(function() {
 											  "leftOp":capteur,
 											  "rightOp":valeur}],
 							  "actions": [{"actuator":actionneur,
-							  "value": "0"}]
+							  "value": activation}]
 							  }
 					};
 
