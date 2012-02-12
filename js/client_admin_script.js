@@ -152,7 +152,6 @@ $(function() {
 							  }
 					};
 
-        console.log("eube="+valeur);
 		sendJson(data);
 	});
 	
