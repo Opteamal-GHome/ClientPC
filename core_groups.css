@@ -12,6 +12,7 @@
 #name_group {
 	position: absolute;
 	right: 375px;
+	width: 160px;
 	background-color: #E8F8BB;
     border: 1px solid #DAED9D;
     border-radius: 5px 5px 5px 5px;
@@ -29,7 +30,7 @@
 	height: 300px;
     position: absolute;
     right: 300px;
-    top: 120px;
+    top: 140px;
     width: 250px;
 	background-color: #FFFFFF;
     border: 1px solid #DAED9D;
@@ -80,6 +81,10 @@ li.periph {
 	z-index: 100;
 }
 
+li.periph:hover {
+    opacity: 0.9;
+}
+
 li.periph .img_periph {
 	float: left;
 	width: 45px;
@@ -96,9 +101,30 @@ li.group {
 	list-style-type: none;
 	text-align: center;
 	padding: 10px 0 5px 0;
+	position: relative;
 }
 
 li.group img {
 	height: 50px;
 	width: 50px;
 }
+
+li.group img.btn_del_grp {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	top: -5px;
+	right: -5px;
+	opacity: 0.0;
+	
+	-moz-transition: all 0.3s ease-in 0s; 
+	-webkit-transition: all 0.3s ease-in 0s; 
+	-o-transition: all 0.3s ease-in 0s; 
+	-ms-transition: all 0.3s ease-in 0s;
+}
+
+li.group:hover > img.btn_del_grp {
+	opacity: 1.0;
+}
+

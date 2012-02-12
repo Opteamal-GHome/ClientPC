@@ -68,16 +68,21 @@ $(function() {
 		
 			var arrayId = new Array();
 			$('li', $list_devices).each(function(i) {
-				arrayId.push( $(this).attr("alt") );
+				arrayId.push( $(this).attr("id") );
 			});
 		
 			var data =  {"msgType": "new_group", 
-						 "name": name_group.val(),
+						 "name": $('#name_group').val(),
 						 "type": $('li:first', $list_devices).attr("alt"),
 						 "devices": arrayId
 						};
 
 			sendJson(data);
+			
+			$('#liste_groupes').append('<li class="group"> <img class="btn_del_grp" src="images/moblin-close2.png"> <img src="images/ring-icon.png">' + $('#name_group').val() + '</li>');
+			$('#liste_groupes li.group:last img.btn_del_grp').click(function() {
+			    $(this).parents("li.group").remove();
+			});
 		}
 	});
 });

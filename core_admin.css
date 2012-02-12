@@ -39,7 +39,7 @@ div.box_condition {
 	float: left;
 }
 
-li.capteur {
+li.periph {
 	width: 120px;
 	height: 50px;
 	list-style-type: none;
@@ -51,24 +51,24 @@ li.capteur {
 	z-index: 100;
 }
 
-li.capteur:hover {
+li.periph:hover {
 	opacity: 0.8;
 }
 
-li.capteur .img_capteur {
+li.periph .img_periph {
 	float: left;
 	width: 45px;
 	height: 45px;
 	margin-right: -10px;
 }
 
-.box_action li.capteur .img_capteur {
+.box_action li.periph .img_periph {
 	width: 50px;
 	height: 50px;
 	margin-right: -1px;
 }
 
-li.capteur .nom_capteur {
+li.periph .nom_periph {
 	float: left;
 	line-height: 50px;
 	font-size: 13px;

@@ -4,13 +4,7 @@ function miseAJourCapteur(jsonMess) {
 	$("div.val_capteur", capteur).text(jsonMess.data);
 }
 
-function yourfunction() {  }
-
-
 $(function() {
-	
-	// On active le rafraichissement des valeurs des capteurs toutes les 10 secondes
-	// window.setInterval(yourfunction, 10000);
 	
 	$('input.nom_capteur').focus(function() {
 		$(this).select();
@@ -25,6 +19,24 @@ $(function() {
 					};
 
 		sendJson(data);
+	});
+	
+	$('#Meteo').parent().click(function() {
+	    $('#panneau_cp').fadeIn(1000);
+	});
+	
+	$('#panneau_cp #cp_valider').click(function() {
+	
+	    var data = {"msgType":"meteo", 
+					"codePostal": $('#panneau_cp input').val()
+				   };
+	    console.log("data="+data);
+	    sendJson(data);
+	    $('#panneau_cp').fadeOut(1000);
+	});
+	
+	$('#cp_annuler').click(function() {
+	    $('#panneau_cp').fadeOut(1000);
 	});
 	
 });

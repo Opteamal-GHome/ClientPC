@@ -100,10 +100,10 @@ $(function() {
 	$('#btn_valider').click(function() {
 		
 		var nom = $('#name_rule').val();
-		var capteur = $('#ens_condition div.sel_capteur li.capteur').attr("id");
+		var capteur = $('#ens_condition div.sel_capteur li.periph').attr("id");
 		var operateur = $('#ens_condition div.sel_operateur li.operateur').attr("title");
 		var valeur = $('#valeur_condition').val();
-		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
+		var actionneur = $('#ens_condition div.sel_actionneur li.periph').attr("id");
 
 
 		if (typeof(nom) == 'undefined') {nom="";}
