@@ -79,6 +79,7 @@ li.periph {
 	padding: 5px 0 5px 0;
 	overflow: hidden;
 	z-index: 100;
+	float: left;
 }
 
 li.periph:hover {

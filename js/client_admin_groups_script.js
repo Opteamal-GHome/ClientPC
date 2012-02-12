@@ -19,6 +19,7 @@ function makeDraggable($liste_initiale, $zone_selection) {
 		drop: function( event, ui ) {
 			recycleImage( ui.draggable );
 			
+			console.log("len="+$( "ul", $zone_selection ).children().length);
 			if ( $( "ul", $zone_selection ).children().length == 2 ) {
 				$zone_selection.droppable("option", "accept", 'li');
 			}

@@ -127,7 +127,7 @@ li.operateur:hover {
 	margin-bottom: 20px;
 }
 
-#valeur_condition {
+.valeur_condition {
 	border: 2px solid #57AFE6;
 	border-radius: 3px;
 	position: relative;
@@ -136,6 +136,25 @@ li.operateur:hover {
 	top: 130px;
 	float: left;
 	left: 85px;
+}
+
+.sel_ref_capteur {
+    border: 2px solid #57AFE6;
+	border-radius: 3px;
+	position: relative;
+	width: 122px;
+	height: 62px;
+	top: 125px;
+	float: left;
+	left: 85px;
+}
+
+.chgValCap {
+    float: left;
+    left: 5px;
+    position: relative;
+    top: 190px;
+    
 }
 
 div.btn_ajout_cond {

@@ -11,7 +11,6 @@ $(function() {
 	});
 	
 	$('input.nom_capteur').focusout(function() {
-		console.log("value = " + $(this).val());
 		
 		var data =  {"msgType": "rename_device", 
 					 "id": $(this).parent().attr("id"),
@@ -30,7 +29,6 @@ $(function() {
 	    var data = {"msgType":"meteo", 
 					"codePostal": $('#panneau_cp input').val()
 				   };
-	    console.log("data="+data);
 	    sendJson(data);
 	    $('#panneau_cp').fadeOut(1000);
 	});

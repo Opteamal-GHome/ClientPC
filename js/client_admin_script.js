@@ -3,10 +3,10 @@ function dispReponseAjtRegle(jsonMess) {
 	var $panneau = $('#panneau_reponse');
 	
 	if (jsonMess.status == "REFUSED") {
-		$panneau.text("Votre r�gle est refus�e \n Raison : " + jsonMess.error);
+		$panneau.text("Votre regle est refusee \n Raison : " + jsonMess.error);
 		$panneau.fadeIn(800).delay(2000).fadeOut(1000);
 	} else if (jsonMess.status == "ACCEPTED") {
-		$panneau.text("Votre r�gle est accept�e");
+		$panneau.text("Votre regle est acceptee");
 		$panneau.fadeIn(800).delay(2000).fadeOut(1000);
 	}
 }
@@ -70,6 +70,26 @@ function rendConditionDraggable($condition) {
 	makeDraggable($('.liste_operation', $condition), $('.sel_operateur', $condition), $condition);
 }
 
+function prepareChgtReference($inp_valeur, $box) {
+    
+    $('.chgValCap', $inp_valeur).click(function() {
+	    
+        if ($(this).text() == "Capteur") {
+        
+            $(this).text("Valeur");
+            $inp_valeur.find("input").remove();
+            $inp_valeur.prepend('<div class="sel_ref_capteur"><ul class="gallery ui-helper-reset"/></div>');
+            makeDraggable($('.liste_capteurs', $box), $('.sel_ref_capteur', $inp_valeur), $box);
+        } else if ($(this).text() == "Valeur") {
+            
+            $(this).text("Capteur");
+            $inp_valeur.find("div.sel_ref_capteur").remove();
+            $inp_valeur.prepend('<input class="valeur_condition" />');
+        }
+	    
+	});
+}
+
 $(function() {
 	
 	// On rend draggable les �l�ments dans les bo�tes condition
@@ -97,14 +117,23 @@ $(function() {
 		$( "#slider" ).css("opacity", 0.0);
 	});
 	
+	prepareChgtReference($('#ens_condition .inp_valeur'), $('#ens_condition div.box_condition'));
+	
 	$('#btn_valider').click(function() {
 		
 		var nom = $('#name_rule').val();
 		var capteur = $('#ens_condition div.sel_capteur li.periph').attr("id");
 		var operateur = $('#ens_condition div.sel_operateur li.operateur').attr("title");
-		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.periph').attr("id");
 		var activation = ($('#ens_condition #slider a').css("left") == "0px") ? 0 : 1;
+
+        var valeur;
+        if ( $('#ens_condition .inp_valeur .chgValCap').text() == "Capteur" ) { // on a une valeur
+            valeur = $('#ens_condition input.valeur_condition').val();
+        }
+		else {
+		    valeur = "@" + $('#ens_condition .inp_valeur li').attr("id");
+		}
 
 
 		if (typeof(nom) == 'undefined') {nom="";}
@@ -123,10 +152,10 @@ $(function() {
 							  }
 					};
 
+        console.log("eube="+valeur);
 		sendJson(data);
 	});
 	
-	//window.setInterval(yourfunction, 5000);
 	$('#name_rule').focus(function() {
 		$(this).val("");
 	}).focusout(function() {
