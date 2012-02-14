@@ -7,7 +7,45 @@
 		<link rel="stylesheet" href="jquery-ui-1.8.17/development-bundle/themes/base/jquery.ui.all.css">
 		<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-ui-1.8.17.custom.min.js"></script>
-		<script type="text/javascript" src="client_admin_script.js"></script>
+		<!-- <script type="text/javascript" src="client_admin_script.js"></script> -->
+	
+		<link rel="stylesheet" type="text/css" href="jqplot/jquery.jqplot.css" />
+		<script language="javascript" type="text/javascript" src="jqplot/jquery.jqplot.min.js"></script>
+		<script language="javascript" type="text/javascript" src="jqplot/jqplot.logAxisRenderer.js"></script>
+		<script language="javascript" type="text/javascript" src="jqplot/jqplot.canvasTextRenderer.min.js"></script>
+		<script language="javascript" type="text/javascript" src="jqplot/jqplot.canvasAxisLabelRenderer.min.js"></script>
+	
+	<script type="text/javascript">
+	
+	$(function()
+	{
+	 
+		var plot2 = $.jqplot ('chartdiv', [[3,7,9,1,4,6,8,2,5]], {
+			title: 'Température',
+      // You can specify options for all axes on the plot at once with
+      // the axesDefaults object.  Here, we're using a canvas renderer
+      // to draw the axis label which allows rotated text.
+      axesDefaults: {
+        labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+      },
+      axes: {
+        // options for each axis are specified in seperate option objects.
+        xaxis: {
+          label: "Temps (min)",
+          // Turn off "padding".  This will allow data point to lie on the
+          // edges of the grid.  Default padding is 1.2 and will keep all
+          // points inside the bounds of the grid.
+          pad: 0
+        },
+        yaxis: {
+          label: "Température (°C)"
+        }
+      }
+    });
+	 });
+	 
+	</script>
+	
 	
 	</head>
 	
@@ -39,78 +77,9 @@
 			</ul>
 
 		
-<div id="core_admin">
+<div id="core_statistiques">
 
-	<div id="urlServer" style="visibility:hidden"></div>
-
-	<div id="ens_condition">
-		<div class="box_condition"> 
-			<ul class="liste_capteurs gallery ui-helper-reset ui-helper-clearfix">
-				<li class="capteur">
-					<img class="img_capteur" src="Thermometer_1_24282.png"> 
-					<div class="nom_capteur">Salon</div>
-				</li>
-				<li class="capteur">
-					<img class="img_capteur" src="bulb.png">
-					<div class="nom_capteur">Chambre</div>
-				</li>
-				<li class="capteur">
-					<img class="img_capteur" src="Thermometer_1_24282.png">
-					<div class="nom_capteur">Salle de bain</div>
-				</li>
-			</ul>
-			
-			<div class="sel_capteur">
-				<ul class='gallery ui-helper-reset'/>
-			</div>
-			
-			<div class="operation">
-				<div class="sel_operateur">
-					<ul class='gallery ui-helper-reset'/>
-				</div>
-				<ul class="liste_operation">
-					<li class="operateur" title="inf"><</li>
-					<li class="operateur" title="equ">=</li>
-					<li class="operateur" title="sup">></li>
-				</ul>
-			</div>
-			
-			<div class="inp_valeur">
-				<input id="valeur_condition" />
-			</div>
-			
-			<div class="btn_ajout_cond">
-			</div>
-		
-		</div>
-	</div>
-		
-	<div class="fleche_condition"> 
-		<div class="regroupe_cond">
-		</div>
-		<div class="img_fleche">
-		</div>
-	</div>
-
-	<div class="box_action"> 
-		<ul class="liste_actionneurs">
-			<li class="capteur">
-					<img class="img_capteur" src="C315b.png"> 
-					<div class="nom_capteur">Salon</div>
-				</li>
-				<li class="capteur">
-					<img class="img_capteur" src="C315b.png">
-					<div class="nom_capteur">Chambre</div>
-				</li>
-		</ul>
-		<div class="sel_actionneur">
-			<ul class='gallery ui-helper-reset'/>
-		</div>
-		<div class="img_action">
-			<div id="slider"></div>
-		</div>
-		<div id="btn_valider">Valider</div>
-	</div>
+	<div id="chartdiv" style="height:450px;width:600px;margin:auto;"></div>
 
 </div>
 

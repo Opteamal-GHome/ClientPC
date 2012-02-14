@@ -130,7 +130,7 @@ div.btn_ajout_cond {
 	position: relative;
 	top: 280px;
 	left: 590px;
-	background: url("round_plus.png") 0 0 no-repeat white;
+	background: url("images/round_plus.png") 0 0 no-repeat white;
 	background-size: 100% 100%;
 	border: 1px solid transparent;
 	border-radius: 20px;
@@ -141,7 +141,7 @@ div.btn_ajout_cond {
 
 div.fleche_condition {
 	position: relative;
-	background: url("parenthese.png") 0 0 no-repeat transparent;
+	background: url("images/parenthese.png") 0 0 no-repeat transparent;
 	background-size: 100% 100%;
 	margin: 0 10 0 10;
 	float: left;
@@ -181,7 +181,7 @@ ul.liste_actionneurs {
 	width: 77px;
 	height: 32px;
 	padding: 20 20 0 20;
-	background: url("ui_set_onoff_02.png") 0 0 no-repeat transparent;
+	background: url("images/ui_set_onoff_02.png") 0 0 no-repeat transparent;
 	background-position: -42px -18px;
 	border-radius: 25px 25px 25px 25px;
 }
