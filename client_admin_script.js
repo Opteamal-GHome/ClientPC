@@ -89,7 +89,8 @@ $(function() {
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
 
-		var network = new Network();
+		var network = new Network(this);
+		network.connect();
 		var data =  {"type": "newRule", 
 					 "rule": {"ruleName": "", 
 							  "conditions": [{"type":operateur, 
