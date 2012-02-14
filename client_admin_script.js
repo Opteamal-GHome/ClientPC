@@ -55,7 +55,6 @@ $(function() {
 	
 	// On rend draggable les éléments dans les boîtes condition
 	$('div.box_condition').each(function(i) {
-		console.log("box = " + $(this).html());
 		makeDraggable($('.liste_capteurs', $(this)), $('.sel_capteur', $(this)), $(this));
 		console.log('klerjgn')
 		makeDraggable($('.liste_operation', $(this)), $('.sel_operateur', $(this)), $(this));
