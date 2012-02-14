@@ -5,6 +5,7 @@ function Network (){
   this.connected = false;
   
   var ws;
+  var PR_DEBUG = 1;
   
   this.events = {
     onConnect: function(){},
