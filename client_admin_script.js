@@ -89,13 +89,21 @@ $(function() {
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
 
-		$.ajax({
-			type: 'POST',
-			url: "/form",
-			data: '{"type": "newRule", "rule": {"ruleName": "", "conditions": [{"type":"' + operateur + '", "leftOp":"' + capteur + '", "rightOp":"' + valeur + '"}], \
-											 "actions": [{"actuator": "' + actionneur + '", "value": "0"}]}}',
-			dataType: "json"
-		});
+		var network = new Network();
+		var data =  {"type": "newRule", 
+					 "rule": {"ruleName": "", 
+							  "conditions": [{"type":operateur, 
+											  "leftOp":capteur,
+											  "rightOp":valeur}],
+							  "actions": [{"actuator":actionneur,
+							  "value": "0"}]
+							  }
+					};
+					
+		console.log("data =" + data);
+					
+		network.sendNewRule(data);
+		
 	});
 	
 	//window.setInterval(yourfunction, 5000);
