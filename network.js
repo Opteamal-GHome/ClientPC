@@ -118,4 +118,9 @@ function Network (){
 	    this.broadcast(bouge);
   };
   
+  this.sendNewRule = function(message) {
+		this.broadcast(message);
+  };
+  
+  
 }
