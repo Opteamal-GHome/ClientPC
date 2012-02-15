@@ -88,8 +88,8 @@ $(function() {
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
 
-		var network = new Network(this);
-		network.connect();
+		//var network = new Network(this);
+		//network.connect();
 		var data =  {"type": "newRule", 
 					 "rule": {"ruleName": "", 
 							  "conditions": [{"type":operateur, 
@@ -99,10 +99,12 @@ $(function() {
 							  "value": "0"}]
 							  }
 					};
+
+		//var data = "Coucou";
 					
-		console.log("data =" + data);
+		//console.log("data =" + data);
 					
-		network.sendNewRule(data);
+		sendNewRule(data);
 		
 	});
 	
