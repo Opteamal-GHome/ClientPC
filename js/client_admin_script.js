@@ -83,15 +83,14 @@ $(function() {
 	
 	$('#btn_valider').click(function() {
 		
+		var nom = $('#name_rule').val();
 		var capteur = $('#ens_condition div.sel_capteur li.capteur').attr("id");
 		var operateur = $('#ens_condition div.sel_operateur li.operateur').attr("title");
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
 
-		//var network = new Network(this);
-		//network.connect();
 		var data =  {"type": "newRule", 
-					 "rule": {"ruleName": "", 
+					 "rule": {"ruleName":nom, 
 							  "conditions": [{"type":operateur, 
 											  "leftOp":capteur,
 											  "rightOp":valeur}],
@@ -100,16 +99,18 @@ $(function() {
 							  }
 					};
 
-		//var data = "Coucou";
-					
-		//console.log("data =" + data);
-					
 		sendNewRule(data);
 		
 	});
 	
 	//window.setInterval(yourfunction, 5000);
-
+	$('#name_rule').focus(function() {
+		$(this).val("");
+	}).focusout(function() {
+		if ($(this).val() == "") {
+			$(this).val("Nom Règle");
+		}
+	});
 	
 	$('.btn_ajout_cond').click(function() {
 		

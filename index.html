@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="jquery-ui-1.8.17/development-bundle/themes/base/jquery.ui.all.css">
 		<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-ui-1.8.17.custom.min.js"></script>
-		<!-- <script type="text/javascript" src="client_admin_script.js"></script> -->
+		<script type="text/javascript" src="js/client_admin_script.js"></script>
 	
 		<link rel="stylesheet" type="text/css" href="jqplot/jquery.jqplot.css" />
 		<script language="javascript" type="text/javascript" src="jqplot/jquery.jqplot.min.js"></script>
@@ -16,7 +16,7 @@
 		<script language="javascript" type="text/javascript" src="jqplot/jqplot.canvasAxisLabelRenderer.min.js"></script>
 	
 	<script type="text/javascript">
-	
+	/*
 	$(function()
 	{
 	 
@@ -42,7 +42,7 @@
         }
       }
     });
-	 });
+	 });*/
 	 
 	</script>
 	
@@ -76,13 +76,99 @@
 				
 			</ul>
 
+	<div id="core_admin">
+
+	
+	<div id="urlServer" style="visibility:hidden">
+	$IPSERVEUR$
+	</div>
+	<input type="text" id="name_rule" value="Nom Règle"/>
+
+	<div id="ens_condition">
+		<div class="box_condition"> 
+			<ul class="liste_capteurs gallery ui-helper-reset ui-helper-clearfix">
+				$LISTECAPTEURS$
+			</ul>
+
+			<div class="sel_capteur">
+				<ul class='gallery ui-helper-reset'/>
+			</div>
+			
+			<div class="operation">
+				<div class="sel_operateur">
+					<ul class='gallery ui-helper-reset'/>
+				</div>
+				<ul class="liste_operation">
+					<li class="operateur" title="inf"><</li>
+					<li class="operateur" title="equ">=</li>
+					<li class="operateur" title="sup">></li>
+				</ul>
+			</div>
+			
+			<div class="inp_valeur">
+				<input id="valeur_condition" />
+			</div>
+			
+			<div class="btn_ajout_cond">
+			</div>
 		
+		</div>
+		
+		<div class="fleche_condition"> 
+			<div class="regroupe_cond">
+			</div>
+			<div class="img_fleche">
+			</div>
+		</div>
+	
+		<div class="box_action"> 
+			<ul class="liste_actionneurs">
+				$LISTEACTIONNEURS$
+			</ul>
+			<div class="sel_actionneur">
+				<ul class='gallery ui-helper-reset'/>
+			</div>
+			<div class="img_action">
+				<div id="slider"></div>
+			</div>
+			<div id="btn_valider">Valider</div>
+		</div>
+	</div>
+	
+	<!--
+		<div id="box_capteurs">
+			<ul id="liste_capteurs_gp">
+				<li id="12" class="capteur">
+					<img class="img_capteur" src="images/Thermometer_1_24282.png"> 
+					<div class="nom_capteur">Salon</div>
+				</li>
+				<li id="2" class="capteur">
+					<img class="img_capteur" src="images/bulb.png">
+					<div class="nom_capteur">Chambre</div>
+				</li>
+				<li id="3" class="capteur">
+					<img class="img_capteur" src="images/Thermometer_1_24282.png"> 
+					<div class="nom_capteur">Salle de bain</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="box_group">
+			<div class="name_group">Name</div>
+			<ul class='gallery ui-helper-reset'/>
+			<div id="btn_creer">Créer</div>
+		</div>
+	-->
+</div>	
+<!--
 <div id="core_statistiques">
 
 	<div id="chartdiv" style="height:450px;width:600px;margin:auto;"></div>
 
 </div>
 
+
+-->
 		
 		</div> <!-- Fin de #main -->
 	</body>
