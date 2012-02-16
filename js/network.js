@@ -3,7 +3,7 @@
  */
 
   
-var wsuri = "ws://localhost:9000";
+var wsuri = "ws://" + $('#urlServer').text().split(":")[0] + ":9000";
 var webSocket;
 
 $(function() {
@@ -19,8 +19,8 @@ $(function() {
 	webSocket.onmessage = function(e) {
 		console.log("Got echo: " + e.data);
 		console.log("msg type : " + e.data.msgType);
-		console.log("id : " + e.data.id);
-		console.log("value : " + e.data.data);
+		console.log("id : " + e.data.status);
+		console.log("value : " + e.data.error);
 	}
 });			 
 
