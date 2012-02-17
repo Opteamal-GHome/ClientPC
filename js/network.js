@@ -18,11 +18,13 @@ $(function() {
 
 	webSocket.onmessage = function(e) {
 		console.log("Got echo: " + e.data);
-		console.log("msg type : " + e.data.msgType);
-		if (e.data.id) { console.log("id : " + e.data.id); }
-		if (e.data.id) { console.log("status : " + e.data.status); }
-		if (e.data.id) { console.log("value : " + e.data.data); }
-		if (e.data.id) { console.log("error : " + e.data.error); }
+		var msgParsed = JSON.parse(e.data);
+		console.log("Got parsed: " + msgParsed);
+		console.log("msg type : " + msgParsed.msgType);
+		if (msgParsed.id) { console.log("id : " + msgParsed.id); }
+		if (msgParsed.status) { console.log("status : " + msgParsed.status); }
+		if (msgParsed.data) { console.log("value : " + msgParsed.data); }
+		if (msgParsed.error) { console.log("error : " + msgParsed.error); }
 	}
 });			 
 
