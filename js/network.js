@@ -29,6 +29,9 @@ $(function() {
 function sendNewRule(message) {
 	console.log("message = " + message);
 	console.log("webSocket = " + webSocket);
+	console.log("JSON = " + JSON);
+	console.log("JSON = " + JSON.parse());
+	console.log("JSON = " + JSON.stringify());
 
 	webSocket.send(JSON.stringify(message));
 };
