@@ -14,11 +14,17 @@
 }
 
 .nom_capteur {
-	width: 200px;
+	position: relative;
+	width: 180px;
 	height: 50px;
+	left: 10px;
 	line-height: 50px;
 	text-align: center;
 	margin-bottom: 10;
+	font-size: 100%;
+	border: 0 solid #57AFE6;
+	border-bottom-width: 1;
+
 }
 
 .capteur .img_capteur{
