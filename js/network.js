@@ -31,7 +31,7 @@ function sendNewRule(message) {
 	console.log("webSocket = " + webSocket);
 	console.log("JSON = " + JSON);
 	console.log("JSON = " + JSON.parse('{"creditBalance":0,"starStatus":false}'));
-	console.log("JSON = " + JSON.stringify());
+	console.log("JSON = " + JSON.stringify('{"creditBalance":0,"starStatus":false}'));
 
 	webSocket.send(JSON.stringify(message));
 };
