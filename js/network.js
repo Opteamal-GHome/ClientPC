@@ -3,7 +3,7 @@
  */
 
   
-var wsuri = "ws://" + $('#urlServer').text().split(":")[0] + ":9000";
+var wsuri = "ws://localhost:8080"; // + $('#urlServer').text().split(":")[0] + ":9000";
 var webSocket;
 
 $(function() {
@@ -33,7 +33,7 @@ function sendNewRule(message) {
 	console.log("JSON = " + JSON.parse('{"creditBalance":0,"starStatus":false}'));
 	console.log("JSON = " + JSON.stringify('{"creditBalance":0,"starStatus":false}'));
 
-	webSocket.send(JSON.stringify(message));
+	webSocket.send(JSON.stringify('{"creditBalance":0,"starStatus":false}'));
 };
   
   
