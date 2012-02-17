@@ -19,8 +19,10 @@ $(function() {
 	webSocket.onmessage = function(e) {
 		console.log("Got echo: " + e.data);
 		console.log("msg type : " + e.data.msgType);
-		console.log("id : " + e.data.status);
-		console.log("value : " + e.data.error);
+		if (e.data.id) { console.log("id : " + e.data.id); }
+		if (e.data.id) { console.log("status : " + e.data.status); }
+		if (e.data.id) { console.log("value : " + e.data.data); }
+		if (e.data.id) { console.log("error : " + e.data.error); }
 	}
 });			 
 
