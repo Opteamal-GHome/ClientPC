@@ -16,6 +16,16 @@ $(function() {
 		$(this).select();
 	});
 	
+	$('input.nom_capteur').focusOut(function() {
+		console.log("value = " + $(this).val());
+		
+		var data =  {"msgType": "rename_device", 
+					 "rule": $(this).val()
+					};
+
+		sendJson(data);
+	});
+	
 	$('.capteur').click(function() {
 	$('#panneau_reponse').text("Votre règle est refusée \n Raison : ");
 			$('#panneau_reponse').fadeIn(800).delay(2000).fadeOut(1000);
