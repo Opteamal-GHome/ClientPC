@@ -9,7 +9,7 @@ var webSocket;
 $(function() {
 
 	if ("WebSocket" in window) {
-	console.log("text = " + $('#urlServer').text().split(":")[0] + " et " + $('#urlServer').text().split(":")[1] )
+	console.log("text = " + $('#urlServer').text().split(":")[0].replace(/^\s+/g,'').replace(/\s+$/g,'') + " et " + $('#urlServer').text().split(":")[1] )
 		console.log(wsuri);
 		webSocket = new WebSocket(wsuri);
 	}
