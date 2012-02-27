@@ -9,6 +9,7 @@ var webSocket;
 $(function() {
 
 	if ("WebSocket" in window) {
+		console.log(wsuri);
 		webSocket = new WebSocket(wsuri);
 	}
 	else {
