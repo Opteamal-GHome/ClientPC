@@ -9,6 +9,7 @@ var webSocket;
 $(function() {
 
 	if ("WebSocket" in window) {
+	console.log("text = " + $('#urlServer').text())
 		console.log(wsuri);
 		webSocket = new WebSocket(wsuri);
 	}
