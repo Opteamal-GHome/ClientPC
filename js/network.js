@@ -2,8 +2,8 @@
  * Gère la partie réseau (connexions) du client.
  */
 
-  
-var wsuri = "ws://localhost:8081"; // + $('#urlServer').text().split(":")[0] + ":9000";
+  //"ws://localhost:8081"; //
+var wsuri =  + $('#urlServer').text().split(":")[0] + ":8081";
 var webSocket;
 
 $(function() {
