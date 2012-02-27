@@ -102,7 +102,7 @@ $(function() {
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
 
-		var data =  {"type": "newRule", 
+		var data =  {"msgType": "newRule", 
 					 "rule": {"ruleName":nom, 
 							  "conditions": [{"type":operateur, 
 											  "leftOp":capteur,
@@ -136,14 +136,15 @@ $(function() {
 	});
 	
 	$('img.btn_close_regle').click(function() {
-		
+	console.log("trololo");
+		/*
 		var nomRegle = $(this).parent().text();
 		console.log("nom = " + nomRegle);
 		
 		var data =  {"msgType": "rule_removed", 
 					 "rule":nomRegle
 					};
-	
+	*/
 		//sendJson(data);
 	});
 	
