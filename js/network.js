@@ -21,6 +21,15 @@ $(function() {
 		var msgParsed = JSON.parse(e.data);
 		console.log("Got parsed: " + msgParsed);
 		console.log("msg type : " + msgParsed.msgType);
+		
+		if (msgParsed.msgType == "device_updated") {
+			miseAJourCapteur(msgParsed);
+		} else if (msgParsed.msgType == "tabStat") {
+			miseAJourStat(msgParsed);
+		} else if (msgParsed.msgType == "answerRule") {
+			
+		}
+		
 		if (msgParsed.id) { console.log("id : " + msgParsed.id); }
 		if (msgParsed.status) { console.log("status : " + msgParsed.status); }
 		if (msgParsed.data) { console.log("value : " + msgParsed.data); }

@@ -1,3 +1,7 @@
+function miseAJourStat(jsonMess) {
+
+}
+
 $(function()
 {
 	var plot2 = $.jqplot ('chartdiv', [[3,7,9,1,4,6,8,2,5]], {

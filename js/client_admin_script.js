@@ -1,3 +1,16 @@
+function dispReponseAjtRegle(jsonMess) {
+	
+	var $panneau = $('#panneau_reponse');
+	
+	if (jsonMess.status == "REFUSED") {
+		$panneau.text("Votre règle est refusée \n Raison : " + jsonMess.error);
+		$panneau.fadeIn(800).delay(2000).fadeOut(1000);
+	} else if (jsonMess.status == "DONE") {
+		$panneau.text("Votre règle est acceptée");
+		$panneau.fadeIn(800).delay(2000).fadeOut(1000);
+	}
+}
+
 function makeDraggable($liste_initiale, $zone_selection, $box) {
 	
 	// let the gallery items be draggable
@@ -114,11 +127,7 @@ $(function() {
 	
 	$('.btn_ajout_cond').click(function() {
 		
-		 $.getJSON('/capteurs/alldevices', function(data) {
-            console.log("recu =" +data); //uncomment this for debug
-            //alert (data.item1+" "+data.item2+" "+data.item3); //further debug
-            //$('#showdata').html("<p>item1="+data.item1+" item2="+data.item2+" item3="+data.item3+"</p>");
-        });
+		
 		/*
 		$('#ens_condition').height($('#ens_condition').height() + 310);
 		$('.fleche_condition').height($('#ens_condition').height());
