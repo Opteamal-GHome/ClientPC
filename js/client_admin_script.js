@@ -112,7 +112,7 @@ $(function() {
 							  }
 					};
 
-		sendNewRule(data);
+		sendJson(data);
 		
 	});
 	
@@ -133,6 +133,18 @@ $(function() {
 		$('.fleche_condition').height($('#ens_condition').height());
 		$('#ens_condition div.box_condition:last').after('<div class="box_condition"></div>');
 		*/
+	});
+	
+	$('img.btn_close_regle').click(function() {
+		
+		var nomRegle = $(this).parent().text();
+		console.log("nom = " + nomRegle);
+		
+		var data =  {"msgType": "rule_removed", 
+					 "rule":nomRegle
+					};
+	
+		//sendJson(data);
 	});
 	
 });
