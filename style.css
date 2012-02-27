@@ -3,6 +3,11 @@ body {
 	font-family: "Droid Sans",Georgia,Serif;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
 #main {
 	width: 950px;
 	margin: auto;
