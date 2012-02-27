@@ -16,11 +16,12 @@ $(function() {
 		$(this).select();
 	});
 	
-	$('input.nom_capteur').focusOut(function() {
+	$('input.nom_capteur').focusout(function() {
 		console.log("value = " + $(this).val());
 		
 		var data =  {"msgType": "rename_device", 
-					 "rule": $(this).val()
+					 "id": $(this).parent().attr("id"),
+					 "name": $(this).val()
 					};
 
 		sendJson(data);
