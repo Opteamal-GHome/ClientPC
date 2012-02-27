@@ -8,10 +8,8 @@ var webSocket;
 
 $(function() {
 
-	 wsuri = "ws://" + $('#urlServer').text().split(":")[0].replace(/^\s+/g,'').replace(/\s+$/g,'') + ":8081";
+	wsuri = "ws://" + $('#urlServer').text().split(":")[0].replace(/^\s+/g,'').replace(/\s+$/g,'') + ":8081";
 	if ("WebSocket" in window) {
-	console.log("text = " + $('#urlServer').text().split(":")[0].replace(/^\s+/g,'').replace(/\s+$/g,'') + " et " + $('#urlServer').text().split(":")[1] )
-		console.log(wsuri);
 		webSocket = new WebSocket(wsuri);
 	}
 	else {
@@ -40,7 +38,7 @@ $(function() {
 	}
 });			 
 
-function sendNewRule(message) {
+function sendJson(message) {
 	console.log("message = " + message);
 	console.log("webSocket = " + webSocket);
 	webSocket.send(JSON.stringify(message));
