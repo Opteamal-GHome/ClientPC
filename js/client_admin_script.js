@@ -102,6 +102,12 @@ $(function() {
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
 
+		if (typeof(nom) == 'undefined') {nom="";}
+		if (typeof(capteur) == 'undefined') {capteur="";}
+		if (typeof(operateur) == 'undefined') {operateur="";}
+		if (typeof(valeur) == 'undefined') {valeur="";}
+		if (typeof(actionneur) == 'undefined') {actionneur="";}
+
 		var data =  {"msgType": "newRule", 
 					 "rule": {"ruleName":nom, 
 							  "conditions": [{"type":operateur, 
@@ -112,6 +118,8 @@ $(function() {
 							  }
 					};
 
+		console.log("Data : " + JSON.stringify(data))
+
 		sendJson(data);
 		
 	});
@@ -121,7 +129,7 @@ $(function() {
 		$(this).val("");
 	}).focusout(function() {
 		if ($(this).val() == "") {
-			$(this).val("Nom Règle");
+			$(this).val("Nom Regle");
 		}
 	});
 	
