@@ -1,5 +1,37 @@
 function miseAJourStat(jsonMess) {
 
+	var graphTitle;
+	var labelX = "Temps (min)";
+	var labelY;
+	
+	$('#core_statistiques').empty();
+	$('#core_statistiques').append('<div id="chartdiv" style="height:450px;width:600px;margin:auto;"></div>');
+
+	
+	
+	if (jsonMess.typeStat = "T") {
+		graphTitle = 'Température';
+		labelY = "Température (°C)";
+	} else if (jsonMess.typeStat = "P") {
+	
+	}
+	
+	var plot2 = $.jqplot ('chartdiv', [jsonMess.data], {
+		title: graphTitle,
+
+		axesDefaults: {
+			labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+		},
+		axes: {
+			xaxis: {
+				label: labelX,
+				pad: 0
+			},
+			yaxis: {
+				label: labelY
+			}
+		}
+    });
 }
 
 $(function()
