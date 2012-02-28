@@ -28,7 +28,7 @@ $(function() {
 		} else if (msgParsed.msgType == "tabStat") {
 			miseAJourStat(msgParsed);
 		} else if (msgParsed.msgType == "answerRule") {
-			
+			dispReponseAjtRegle(msgParsed);
 		}
 		
 		if (msgParsed.id) { console.log("id : " + msgParsed.id); }
