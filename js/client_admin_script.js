@@ -102,22 +102,24 @@ $(function() {
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
 
-		if ( ($('div.sel_capteur ul').length > 0) 
-		  && ($('div.sel_operateur ul').length > 0) 
-		  && ($('div.sel_actionneur ul').length > 0) ) {
-		
-			var data =  {"msgType": "newRule", 
-						 "rule": {"ruleName":nom, 
-								  "conditions": [{"type":operateur, 
-												  "leftOp":capteur,
-												  "rightOp":valeur}],
-								  "actions": [{"actuator":actionneur,
-								  "value": "0"}]
-								  }
-						};
 
-			sendJson(data);
-		}
+		if (typeof(nom) == 'undefined') {nom="";}
+		if (typeof(capteur) == 'undefined') {capteur="";}
+		if (typeof(operateur) == 'undefined') {operateur="";}
+		if (typeof(valeur) == 'undefined') {valeur="";}
+		if (typeof(actionneur) == 'undefined') {actionneur="";}
+
+		var data =  {"msgType": "newRule", 
+					 "rule": {"ruleName":nom, 
+							  "conditions": [{"type":operateur, 
+											  "leftOp":capteur,
+											  "rightOp":valeur}],
+							  "actions": [{"actuator":actionneur,
+							  "value": "0"}]
+							  }
+					};
+
+		sendJson(data);
 	});
 	
 	//window.setInterval(yourfunction, 5000);
@@ -125,7 +127,7 @@ $(function() {
 		$(this).val("");
 	}).focusout(function() {
 		if ($(this).val() == "") {
-			$(this).val("Nom Règle");
+			$(this).val("Nom Regle");
 		}
 	});
 	
