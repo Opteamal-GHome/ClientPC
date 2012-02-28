@@ -2,7 +2,7 @@
 
 	<head>
 		<link rel=StyleSheet href="style.css" type="text/css" media=screen>
-		<link rel=StyleSheet href="core_capteurs.css" type="text/css" media=screen>
+		<link rel=StyleSheet href="core_admin.css" type="text/css" media=screen>
 		
 		<link rel="stylesheet" href="jquery-ui-1.8.17/development-bundle/themes/base/jquery.ui.all.css">
 		<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-1.7.1.min.js"></script>
@@ -19,7 +19,8 @@
 	
 	$(function()
 	{
-	 
+	 $( "#liste_regles" ).sortable();
+		$( "#liste_regles" ).disableSelection();
 		
 	 });
 	 
@@ -55,7 +56,7 @@
 
 
 
-
+<!--
 <div id="core_capteurs">
 
 <div id="10" class="capteur">
@@ -81,72 +82,85 @@
                 </div>
             </div>
 </div>
-			<!--
+			
 			<div id="core_statistiques">
 
 	<div id="chartdiv" style="height:450px;width:600px;margin:auto;"></div>
 
-</div>
+</div>	--> 
 			
 	<div id="core_admin">
 
 	
-	<div id="urlServer" style="visibility:hidden">
-	$IPSERVEUR$
-	</div>
-	<input type="text" id="name_rule" value="Nom Règle"/>
-
-	<div id="ens_condition">
-		<div class="box_condition"> 
-			<ul class="liste_capteurs gallery ui-helper-reset ui-helper-clearfix">
-				$LISTECAPTEURS$
-			</ul>
-
-			<div class="sel_capteur">
-				<ul class='gallery ui-helper-reset'/>
-			</div>
-			
-			<div class="operation">
-				<div class="sel_operateur">
-					<ul class='gallery ui-helper-reset'/>
-				</div>
-				<ul class="liste_operation">
-					<li class="operateur" title="inf"><</li>
-					<li class="operateur" title="equ">=</li>
-					<li class="operateur" title="sup">></li>
-				</ul>
-			</div>
-			
-			<div class="inp_valeur">
-				<input id="valeur_condition" />
-			</div>
-			
-			<div class="btn_ajout_cond">
-			</div>
-		
-		</div>
-		
-		<div class="fleche_condition"> 
-			<div class="regroupe_cond">
-			</div>
-			<div class="img_fleche">
-			</div>
-		</div>
+		<ul id="liste_regles">
 	
-		<div class="box_action"> 
-			<ul class="liste_actionneurs">
-				$LISTEACTIONNEURS$
-			</ul>
-			<div class="sel_actionneur">
-				<ul class='gallery ui-helper-reset'/>
+		<li class="regle_desc">
+			<div class="top_regle"> Nom Regle 1
+				<img class="btn_close_regle" src="images/moblin-close2.png">
 			</div>
-			<div class="img_action">
-				<div id="slider"></div>
+			
+			<div class="corps_regle">
+				<ul class="liste_conditions">
+					<li class="ligne_regle">
+						<div class="capteur">
+							<img class="img_capteur" src="images/Thermometer_1_24282.png"> 
+							<div class="nom_capteur">Salon</div>
+						</div>
+						<div class="operateur" title="inf"><</div>
+						<div class="value_condition">18</div>
+					</li>
+					<li class="ligne_regle">
+						<div class="capteur">
+							<img class="img_capteur" src="images/Thermometer_1_24282.png"> 
+							<div class="nom_capteur">Chambre1</div>
+						</div>
+						<div class="operateur" title="equ">=</div>
+						<div class="capteur">
+							<img class="img_capteur" src="images/Thermometer_1_24282.png"> 
+							<div class="nom_capteur">Chambre2</div>
+						</div>
+					</li>
+				</ul>
+				<img class="fleche_implique" src="images/arrow black2.gif">
+				<div class="pres_action">
+					<div class="capteur">
+						<img class="img_capteur" src="images/C315b.png"> 
+						<div class="nom_capteur">Salon</div>
+					</div>
+				</div>
+				<div style="clear:both"></div>
 			</div>
-			<div id="btn_valider">Valider</div>
-		</div>
-	</div>
-	--> 
+		</li>
+		
+		<li class="regle_desc">
+			<div class="top_regle"> Nom Regle 2
+				<img class="btn_close_regle" src="images/moblin-close2.png">
+			</div>
+			
+			<div class="corps_regle">
+				<ul class="liste_conditions">
+					<li class="ligne_regle">
+						<div class="capteur">
+							<img class="img_capteur" src="images/bulb.png"> 
+							<div class="nom_capteur">Cuisine</div>
+						</div>
+						<div class="operateur" title="sup">></div>
+						<div class="value_condition">450</div>
+					</li>
+				</ul>
+				<img class="fleche_implique" src="images/arrow black2.gif">
+				<div class="pres_action">
+					<div class="capteur">
+						<img class="img_capteur" src="images/C315b.png"> 
+						<div class="nom_capteur">Cuisine</div>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+		</li>
+	
+	</ul>
+</div>
 	
 	<!--
 		<div id="box_capteurs">

@@ -12,5 +12,9 @@ $(function() {
 		
 			sendJson(data);
 	});
+	
+	// On rend les règles classables
+	$( "#liste_regles" ).sortable();
+	$( "#liste_regles" ).disableSelection();
 });
 		
