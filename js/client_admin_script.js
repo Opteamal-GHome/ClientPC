@@ -102,18 +102,22 @@ $(function() {
 		var valeur = $('#valeur_condition').val();
 		var actionneur = $('#ens_condition div.sel_actionneur li.capteur').attr("id");
 
-		var data =  {"msgType": "newRule", 
-					 "rule": {"ruleName":nom, 
-							  "conditions": [{"type":operateur, 
-											  "leftOp":capteur,
-											  "rightOp":valeur}],
-							  "actions": [{"actuator":actionneur,
-							  "value": "0"}]
-							  }
-					};
-
-		sendJson(data);
+		if ( ($('div.sel_capteur ul').length > 0) 
+		  && ($('div.sel_operateur ul').length > 0) 
+		  && ($('div.sel_actionneur ul').length > 0) ) {
 		
+			var data =  {"msgType": "newRule", 
+						 "rule": {"ruleName":nom, 
+								  "conditions": [{"type":operateur, 
+												  "leftOp":capteur,
+												  "rightOp":valeur}],
+								  "actions": [{"actuator":actionneur,
+								  "value": "0"}]
+								  }
+						};
+
+			sendJson(data);
+		}
 	});
 	
 	//window.setInterval(yourfunction, 5000);
