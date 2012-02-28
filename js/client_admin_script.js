@@ -5,7 +5,7 @@ function dispReponseAjtRegle(jsonMess) {
 	if (jsonMess.status == "REFUSED") {
 		$panneau.text("Votre règle est refusée \n Raison : " + jsonMess.error);
 		$panneau.fadeIn(800).delay(2000).fadeOut(1000);
-	} else if (jsonMess.status == "DONE") {
+	} else if (jsonMess.status == "ACCEPTED") {
 		$panneau.text("Votre règle est acceptée");
 		$panneau.fadeIn(800).delay(2000).fadeOut(1000);
 	}
