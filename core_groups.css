@@ -50,3 +50,14 @@
 #btn_valider:hover {
 	opacity: 0.9;
 }
+
+li.periph {
+	width: 120px;
+	height: 50px;
+	list-style-type: none;
+	background-color: #E8F8BB;
+	border: 1px solid #DAED9D;
+	border-radius: 3px;
+	padding: 5px 0 5px 0;
+	overflow: hidden;
+}
