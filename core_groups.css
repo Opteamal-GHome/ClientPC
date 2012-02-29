@@ -61,3 +61,10 @@ li.periph {
 	padding: 5px 0 5px 0;
 	overflow: hidden;
 }
+
+li.capteur .img_periph {
+	float: left;
+	width: 45px;
+	height: 45px;
+	margin-right: -10px;
+}
