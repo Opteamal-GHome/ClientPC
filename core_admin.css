@@ -217,9 +217,8 @@ ul.liste_actionneurs {
 	position: relative;
 	top: 10px;
 	left: 190px;
-	background-color: black;
+	background-image: -moz-linear-gradient(0% 10px 90deg, #222222, #999999);
 	color: white;
-	border: 1px solid transparent;
 	border-radius: 16px;
 	height: 30px;
 	width: 78px;
@@ -232,7 +231,7 @@ ul.liste_actionneurs {
 }
 
 #btn_valider:hover {
-	background-color: #202020;
+	opacity: 0.8;
 }
 
 /*****  Partie Liste Regles  *****/
