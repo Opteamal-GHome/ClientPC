@@ -3,10 +3,10 @@ function dispReponseAjtRegle(jsonMess) {
 	var $panneau = $('#panneau_reponse');
 	
 	if (jsonMess.status == "REFUSED") {
-		$panneau.text("Votre règle est refusée \n Raison : " + jsonMess.error);
+		$panneau.text("Votre rï¿½gle est refusï¿½e \n Raison : " + jsonMess.error);
 		$panneau.fadeIn(800).delay(2000).fadeOut(1000);
 	} else if (jsonMess.status == "ACCEPTED") {
-		$panneau.text("Votre règle est acceptée");
+		$panneau.text("Votre rï¿½gle est acceptï¿½e");
 		$panneau.fadeIn(800).delay(2000).fadeOut(1000);
 	}
 }
@@ -64,14 +64,16 @@ function makeDraggable($liste_initiale, $zone_selection, $box) {
 }
 function yourfunction() { alert('test'); }
 
+function rendConditionDraggable($condition) {
+	
+	makeDraggable($('.liste_capteurs', $condition), $('.sel_capteur', $condition), $condition);
+	makeDraggable($('.liste_operation', $condition), $('.sel_operateur', $condition), $condition);
+}
+
 $(function() {
 	
-	// On rend draggable les éléments dans les boîtes condition
-	$('div.box_condition').each(function(i) {
-		makeDraggable($('.liste_capteurs', $(this)), $('.sel_capteur', $(this)), $(this));
-		console.log('klerjgn')
-		makeDraggable($('.liste_operation', $(this)), $('.sel_operateur', $(this)), $(this));
-	});
+	// On rend draggable les ï¿½lï¿½ments dans les boï¿½tes condition
+	
 	makeDraggable($('.liste_actionneurs', $('.box_action')), $('.sel_actionneur', $('.box_action')), $('.box_action'));
 
 	$( "#slider" ).slider({
@@ -133,12 +135,14 @@ $(function() {
 	
 	$('.btn_ajout_cond').click(function() {
 		
-		
-		/*
-		$('#ens_condition').height($('#ens_condition').height() + 310);
+		$('#ens_condition').height($('#ens_condition').height() + 325);
 		$('.fleche_condition').height($('#ens_condition').height());
-		$('#ens_condition div.box_condition:last').after('<div class="box_condition"></div>');
-		*/
+		$('#col_conditions div.box_condition:last').clone().appendTo('#col_conditions');
+		
+		// Il faut recreer les draggable dans le panneau ajoutÃ©
+		
+		// Ensuite on unbind le bouton valider + on le remet en prenant en compte la condition supplÃ©mentaire
+		
 	});
 	
 	

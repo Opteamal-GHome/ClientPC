@@ -5,35 +5,37 @@
 
     <input type="text" id="name_rule" value="Nom Regle" />
 	<div id="ens_condition">
-		<div class="box_condition"> 
-			<ul class="liste_capteurs gallery ui-helper-reset ui-helper-clearfix">
-				$LISTECAPTEURS$
-			</ul>
-
-			<div class="sel_capteur">
-				<ul class='gallery ui-helper-reset'/>
-			</div>
-			
-			<div class="operation">
-				<div class="sel_operateur">
+		<div id="col_conditions">
+			<div class="box_condition"> 
+				<ul class="liste_capteurs gallery ui-helper-reset ui-helper-clearfix">
+					$LISTECAPTEURS$
+				</ul>
+	
+				<div class="sel_capteur">
 					<ul class='gallery ui-helper-reset'/>
 				</div>
-				<ul class="liste_operation">
-					<li class="operateur" title="inf"><</li>
-					<li class="operateur" title="equ">=</li>
-					<li class="operateur" title="sup">></li>
-				</ul>
-			</div>
+				
+				<div class="operation">
+					<div class="sel_operateur">
+						<ul class='gallery ui-helper-reset'/>
+					</div>
+					<ul class="liste_operation">
+						<li class="operateur" title="inf"><</li>
+						<li class="operateur" title="equ">=</li>
+						<li class="operateur" title="sup">></li>
+					</ul>
+				</div>
+				
+				<div class="inp_valeur">
+					<input id="valeur_condition" />
+				</div>
+				
+				<div class="btn_ajout_cond">
+				</div>
 			
-			<div class="inp_valeur">
-				<input id="valeur_condition" />
 			</div>
-			
-			<div class="btn_ajout_cond">
-			</div>
-		
 		</div>
-		
+				
 		<div class="fleche_condition"> 
 			<div class="regroupe_cond">
 			</div>
