@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="jquery-ui-1.8.17/development-bundle/themes/base/jquery.ui.all.css">
 		<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-ui-1.8.17.custom.min.js"></script>
-		<script type="text/javascript" src="js/client_admin_regle_script.js"></script>
+		<script type="text/javascript" src="js/client_admin_groups_script.js"></script>
 	
 		<link rel="stylesheet" type="text/css" href="jqplot/jquery.jqplot.css" />
 		<script language="javascript" type="text/javascript" src="jqplot/jquery.jqplot.min.js"></script>
@@ -56,13 +56,14 @@
 
 	<div id="box_periph"> 
 		<ul class="liste_periph">
-			$LISTECAPTEURS$
-			$LISTEACTIONNEURS$
+			<li id="2"  alt="T"  class="periph"><img class="img_periph" src="images/Thermometer_1_24282.png"> <div class="nom_periph"></div></li><li id="3"  alt="T"  class="periph"><img class="img_periph" src="images/Thermometer_1_24282.png"> <div class="nom_periph"></div></li>
+			<li id="1"  alt="E"  class="periph"><img class="img_periph" src="images/C315b.png"> <div class="nom_periph"></div></li>
 		</ul>
 	</div>
 
+	<input type="text" id="name_group" value="Nom Groupe" />
 	<div id="box_groupe">
-		<ul class='gallery ui-helper-reset'/>
+		<ul class='gallery ui-helper-reset'></ul>
 		<div id="btn_valider">Creer</div>
 	</div>
 	
