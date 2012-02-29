@@ -1,9 +1,10 @@
 $(function() {
 
 	$('img.btn_close_regle').click(function() {
-		console.log("trololo");
 			
-			var nomRegle = $(this).parent().text();
+			var $btn = $(this);
+			var nomRegle = $btn.parent().text();
+			var $regle = $btn.parents("li.regle_desc");
 			console.log("nom = " + nomRegle);
 			
 			var data =  {"msgType":"rule_removed", 
@@ -11,6 +12,8 @@ $(function() {
 						};
 		
 			sendJson(data);
+			
+			regle.remove();
 	});
 	
 	// On rend les règles classables
