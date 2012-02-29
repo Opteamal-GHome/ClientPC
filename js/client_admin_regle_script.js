@@ -13,7 +13,7 @@ $(function() {
 		
 			sendJson(data);
 			
-			regle.remove();
+			$regle.remove();
 	});
 	
 	// On rend les règles classables
