@@ -18,7 +18,6 @@ $(function() {
 	}
 
 	webSocket.onmessage = function(e) {
-		console.log("Got echo: " + e.data);
 		var msgParsed = JSON.parse(e.data);
 		console.log("Got parsed: " + msgParsed);
 		console.log("msg type : " + msgParsed.msgType);
@@ -31,17 +30,10 @@ $(function() {
 			dispReponseAjtRegle(msgParsed);
 		}
 		
-		if (msgParsed.id) { console.log("id : " + msgParsed.id); }
-		if (msgParsed.status) { console.log("status : " + msgParsed.status); }
-		if (msgParsed.data) { console.log("value : " + msgParsed.data); }
-		if (msgParsed.error) { console.log("error : " + msgParsed.error); }
 	}
 });			 
 
 function sendJson(message) {
-	console.log("message = " + message);
-	console.log("webSocket = " + webSocket);
 	webSocket.send(JSON.stringify(message));
-};
-  
+};  
   
