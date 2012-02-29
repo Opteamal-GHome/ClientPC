@@ -62,7 +62,7 @@ li.periph {
 	overflow: hidden;
 }
 
-li.capteur .img_periph {
+li.periph .img_periph {
 	float: left;
 	width: 45px;
 	height: 45px;
