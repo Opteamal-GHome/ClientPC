@@ -73,6 +73,7 @@ function rendConditionDraggable($condition) {
 $(function() {
 	
 	// On rend draggable les �l�ments dans les bo�tes condition
+	rendConditionDraggable('#ens_condition div.box_condition');
 	
 	makeDraggable($('.liste_actionneurs', $('.box_action')), $('.sel_actionneur', $('.box_action')), $('.box_action'));
 
