@@ -2,7 +2,7 @@
 
 	<head>
 		<link rel=StyleSheet href="style.css" type="text/css" media=screen>
-		<link rel=StyleSheet href="core_admin.css" type="text/css" media=screen>
+		<link rel=StyleSheet href="core_groups.css" type="text/css" media=screen>
 		
 		<link rel="stylesheet" href="jquery-ui-1.8.17/development-bundle/themes/base/jquery.ui.all.css">
 		<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-1.7.1.min.js"></script>
@@ -52,7 +52,27 @@
 				<li class="onglet_header"> <a href="./about"> A propos </a> </li>
 			</ul>
 			
+<div id="core_groups">
 
+	<div id="box_periph"> 
+		<ul class="liste_periph">
+			$LISTECAPTEURS$
+			$LISTEACTIONNEURS$
+		</ul>
+	</div>
+
+	<div id="box_groupe">
+		<ul class='gallery ui-helper-reset'/>
+		<div id="btn_valider">Creer</div>
+	</div>
+	
+	<div id="pres_groupes">
+		<ul id="liste_groupes">
+			$LISTEGROUPES$
+		</ul>
+	</div>
+	
+</div>
 
 
 <!--
@@ -86,7 +106,7 @@
 
 	<div id="chartdiv" style="height:450px;width:600px;margin:auto;"></div>
 
-</div>	--> 
+</div>	
 			
 	<div id="core_admin">
 
@@ -160,7 +180,7 @@
 	
 	</ul>
 </div>
-	
+	--> 
 	<!--
 		<div id="box_capteurs">
 			<ul id="liste_capteurs_gp">

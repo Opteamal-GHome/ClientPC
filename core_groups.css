@@ -1,0 +1,52 @@
+#box_periph {
+	height: 300px;
+    left: 300px;
+    position: absolute;
+    top: 100px;
+    width: 300px;
+	background-color: #FFFFFF;
+    border: 1px solid #DAED9D;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#box_groupe {
+	height: 300px;
+    position: absolute;
+    right: 300px;
+    top: 100px;
+    width: 250px;
+	background-color: #FFFFFF;
+    border: 1px solid #DAED9D;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#pres_groupes {
+	height: 150px;
+    left: 400px;
+    position: absolute;
+    top: 500px;
+    width: 600px;
+	background-color: #FFFFFF;
+    border: 1px solid #DAED9D;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#btn_valider {
+	position: relative;
+	top: 285px;
+	left: 185px;
+	background-image: -moz-linear-gradient(0% 10px 90deg, #222222, #999999);
+	color: white;
+	border-radius: 16px;
+	height: 30px;
+	width: 68px;
+	line-height: 1.5;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 0 0 0 10px;
+	cursor: pointer;
+}
+
+#btn_valider:hover {
+	opacity: 0.9;
+}
