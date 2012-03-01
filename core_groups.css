@@ -87,3 +87,18 @@ li.periph .img_periph {
 	margin-right: -10px;
 }
 
+li.group {
+	height: 100px;
+	width: 90px;
+	background-color: #E8F8BB;
+	border: 1px solid #DAED9D;
+	border-radius: 3px;
+	list-style-type: none;
+	text-align: center;
+	padding: 10px 0 5px 0;
+}
+
+li.group img {
+	height: 50px;
+	width: 50px;
+}
