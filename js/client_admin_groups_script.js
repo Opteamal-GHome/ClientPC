@@ -94,4 +94,19 @@ $(function() {
 			});
 		}
 	});
+	
+	// On associe la touche de suppression pour les groupes déjà présents
+	$('#liste_groupes li.group img.btn_del_grp').each(function(i) {
+		$(this).click(function() {
+			
+				var $group = $(this).parents("li.group");
+			
+				var data =  {"msgType": "remove_group", 
+							 "name": $group.text()
+							};
+				
+				sendJson(data);				
+			    $group.remove();
+			})
+		});
 });
