@@ -79,9 +79,18 @@ $(function() {
 
 			sendJson(data);
 			
-			$('#liste_groupes').append('<li class="group"> <img class="btn_del_grp" src="images/moblin-close2.png"> <img src="images/ring-icon.png">' + $('#name_group').val() + '</li>');
+			// On ajoute le nouveau groupe dans la liste et on associe la touche de suppression
+			$('#liste_groupes').append('<li class="group"><img class="btn_del_grp" src="images/moblin-close2.png"><img src="images/ring-icon.png">' + $('#name_group').val() + '</li>');
 			$('#liste_groupes li.group:last img.btn_del_grp').click(function() {
-			    $(this).parents("li.group").remove();
+			
+				var $group = $(this).parents("li.group");
+			
+				var data =  {"msgType": "remove_group", 
+							 "name": $group.text()
+							};
+				
+				sendJson(data);				
+			    $group.remove();
 			});
 		}
 	});
