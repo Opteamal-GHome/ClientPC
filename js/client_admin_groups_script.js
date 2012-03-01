@@ -92,6 +92,13 @@ $(function() {
 				sendJson(data);				
 			    $group.remove();
 			});
+			
+			// On vide la liste du groupe et on reset le name
+			var $liste_periph = $('#box_periph ul');
+			$('li', $list_devices).each(function(i) {
+				$(this).appendTo($liste_periph);
+			});
+			$('#name_group').val("Nom Groupe");
 		}
 	});
 	
