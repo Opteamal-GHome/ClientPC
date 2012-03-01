@@ -36,6 +36,7 @@ function miseAJourStat(jsonMess) {
 
 $(function()
 {
+/*
 	var plot2 = $.jqplot ('chartdiv', [[3,7,9,1,4,6,8,2,5]], {
 		title: 'Température',
 		
@@ -59,6 +60,7 @@ $(function()
 			}
 		}
 	});
+	*/
 	
 	$('#ui_element').find('ul').css({
         'left'	:	'-660px'
@@ -88,4 +90,15 @@ $(function()
             $arrow.stop().animate({'left':'200px'},500);
         });
     });
+	
+	$('li', $menu).each(function(i) {
+		$(this).click(function() {
+		
+			var data =  {"msgType": "ask_stat", 
+						 "id": $('div.id_periph', this).text()
+						};
+				
+			sendJson(data);	
+		});
+	});
 });
